@@ -105,7 +105,7 @@ class Client:
 
         Args:
             keyword (str): The keyword to perform a search on LinkedIn.
-            search_type (str, optional): The profile type to search for. Can be either personal or companies. Defaults to 'people'.
+            search_type (str, optional): The profile type to search for. Can be either people or companies. Defaults to 'people'.
             location (str, optional): The location string. Defaults to None.
             size (str, optional): The company size. Defaults to None.
             per_page (int, optional): The number of results to get per page. Defaults to 50.

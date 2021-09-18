@@ -53,7 +53,7 @@ Find personal profiles:
 ```python
 params = {
     'keyword': 'data science',
-    'search_type': 'personal'
+    'search_type': 'people'
 }
 results = client.search_results(**params)
 ```
