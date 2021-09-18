@@ -37,3 +37,31 @@ details = client.profile_details(url, profile_type='company')
 url = 'https://linkedin.com/company/microsoft'
 employees = client.company_employees(url = url, per_page = 50, offset = 0)
 ```
+
+## LinkedIn Search
+Find companies:
+```python
+params = {
+    'keyword': 'data science',
+    'location': 'United States',
+    'size': '11-50',
+    'search_type': 'companies'
+}
+results = client.search_results(**params)
+```
+Find personal profiles:
+```python
+params = {
+    'keyword': 'data science',
+    'search_type': 'personal'
+}
+results = client.search_results(**params)
+```
+
+## Get Locations
+Get supported locations list to use with search.
+```python
+locations = client.get_locations()
+```
+
+For support related to this SDK, use the issues section. For sales related enquiries, send an email at sales@iscraper.io.
