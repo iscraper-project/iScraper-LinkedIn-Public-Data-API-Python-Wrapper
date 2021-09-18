@@ -1,8 +1,0 @@
-setup.py
-iscraper/__init__.py
-iscraper/client.py
-iscraper.egg-info/PKG-INFO
-iscraper.egg-info/SOURCES.txt
-iscraper.egg-info/dependency_links.txt
-iscraper.egg-info/requires.txt
-iscraper.egg-info/top_level.txt
