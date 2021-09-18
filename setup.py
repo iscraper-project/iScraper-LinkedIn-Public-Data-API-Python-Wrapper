@@ -1,9 +1,7 @@
-
 from setuptools import setup
-import sys
 
 
-setup(name='iscraper',
+setup(name='iscraper-python',
 	version='1.0.0',
 	description='Official Python SDK to consume https://iscraper.io LinkedIn data APIs.',
 	author='iScraper',
