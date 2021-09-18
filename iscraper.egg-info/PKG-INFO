@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: iscraper
+Version: 1.0.0
+Summary: Official Python SDK to consume https://iscraper.io LinkedIn data APIs.
+Home-page: https://github.com/iscraper-project/iscraper-python/
+Author: iScraper
+Author-email: sales@iscraper.io
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >3.5.2
+
+UNKNOWN
+
