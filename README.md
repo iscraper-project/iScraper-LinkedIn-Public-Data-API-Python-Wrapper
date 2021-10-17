@@ -1,4 +1,4 @@
-# iScraper Python SDK
+# iScraper LinkedIn API Python SDK
 This is the official SDK to consume iScraper LinkedIn public data APIs. Don't have an API key yet? Visit [https://iscraper.io](https://iscraper.io) to get an API key now.
 
 ## Installation
