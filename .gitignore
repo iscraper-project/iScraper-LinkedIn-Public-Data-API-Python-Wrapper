@@ -11,3 +11,4 @@ lib64
 test-data
 *.pyc
 .vscode
+build
