@@ -14,7 +14,7 @@ python3 setup.py install
 ```
 
 ## Authentication
-You need your API key to consume our APIs. Create the client first by providing your API key. Don't have an API key yet? [https://app.iscraper.io](Get it here.)
+You need your API key to consume our APIs. Create the client first by providing your API key. Don't have an API key yet? [Get it here](https://app.iscraper.io)
 ```python
 from iscraper.client import Client
 client = Client('your-api-key')
