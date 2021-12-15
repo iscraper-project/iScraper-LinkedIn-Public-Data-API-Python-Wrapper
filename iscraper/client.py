@@ -125,6 +125,36 @@ class Client:
         }
         return self._send_request(path=path, data=data)
     
+    def get_jobs(self, company_id, offset, geo_id=0):
+        """Get jobs by company id. company id is found in company details.
+
+        Returns:
+            object: JSON object of jobs list.
+        """
+        path = '/get-jobs'
+        data = {
+            'company_id': company_id,
+            'geo_id': geo_id,
+            'per_page': 50,
+            'offset': offset
+        }
+        return self._send_request(path=path, data=data)
+
+    def job_details(self, job_id, html_description='false'):
+        """Get job detail by job id
+
+        text desc is returned anyway, html would be an extra
+
+        Returns:
+            object: JSON object of job description.
+        """
+        path = '/job-details'
+        data = {
+            'job_id': job_id,
+            'html_description': html_description
+        }
+        return self._send_request(path=path, data=data)
+    
     def get_locations(self):
         """Get supported locations to use with search.
 
