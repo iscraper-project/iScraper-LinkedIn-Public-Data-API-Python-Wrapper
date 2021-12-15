@@ -83,7 +83,7 @@ class Client:
         """
         profile_id = self._parse_id(url)
         path = '/profile-details'
-        return self._send_request(path=path, data={'profile_id': profile_id, profile_type: profile_type})
+        return self._send_request(path=path, data={'profile_id': profile_id, 'profile_type': profile_type})
 
     def company_employees(self, url: str, per_page: int = 50, offset: int = 0):
         """Get company employees.
