@@ -125,7 +125,7 @@ class Client:
         }
         return self._send_request(path=path, data=data)
     
-    def get_jobs(self, company_id, offset, geo_id=0):
+    def get_jobs(self, company_id, offset=0, geo_id=0):
         """Get jobs by company id. company id is found in company details.
 
         Returns:
@@ -140,7 +140,7 @@ class Client:
         }
         return self._send_request(path=path, data=data)
 
-    def job_details(self, job_id, html_description='false'):
+    def job_details(self, job_id, html_description: bool = False):
         """Get job detail by job id
 
         text desc is returned anyway, html would be an extra
