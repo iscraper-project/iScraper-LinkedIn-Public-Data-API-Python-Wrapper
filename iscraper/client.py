@@ -83,7 +83,7 @@ class Client:
         """
         profile_id = self._parse_id(url)
         path = '/profile-details'
-        return self._send_request(path=path, data={'profile_id': profile_id, profile_type: profile_type})
+        return self._send_request(path=path, data={'profile_id': profile_id, 'profile_type': profile_type})
 
     def company_employees(self, url: str, per_page: int = 50, offset: int = 0):
         """Get company employees.
@@ -98,7 +98,7 @@ class Client:
         """
         profile_id = self._parse_id(url)
         path = '/company-employees'
-        return self._send_request(path=path, data={'profile_id': profile_id, per_page: per_page, offset: offset})
+        return self._send_request(path=path, data={'profile_id': profile_id, 'per_page': per_page, 'offset': offset})
 
     def search_results(self, keyword: str, search_type: str = 'people', location: str = None, size: str = None, per_page: int = 50, offset: int = 0):
         """Perform a LinkedIn search.
