@@ -71,19 +71,30 @@ class Client:
         parsed = urlparse(url)
         return str(parsed.path.rstrip('/').split('/')[-1]).strip()
 
-    def profile_details(self, url: str, profile_type: str = 'personal'):
+    def profile_details(self, url: str, profile_type: str = 'personal', contact_info: bool = False, recommendations: bool = False, related_profiles: bool = False):
         """Get details for personal and company LinkedIn profiles.
 
         Args:
             url (str): The LinkedIn profile URL.
             profile_type (str, optional): The profile type. Should be personal or company. Defaults to 'personal'.
+            contact_info (bool, optional): Either to fetch the available contact info for a user or not.
+            recommendations (bool, optional): Either to fetch the available recommendations or not.
+            related_profiles (bool, optional): Either to get the available related profiles or not.
+            
 
         Returns:
             object: The JSON object containing profile details.
         """
         profile_id = self._parse_id(url)
         path = '/profile-details'
-        return self._send_request(path=path, data={'profile_id': profile_id, 'profile_type': profile_type})
+        data = {
+            'profile_id': profile_id,
+            'profile_type': profile_type,
+            'contact_info': contact_info,
+            'recommendations': recommendations,
+            'related_profiles': related_profiles
+        }
+        return self._send_request(path=path, data=data)
 
     def company_employees(self, url: str, per_page: int = 50, offset: int = 0):
         """Get company employees.
