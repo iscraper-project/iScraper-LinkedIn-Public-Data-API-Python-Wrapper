@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='iscraper-python',
-	version='1.0.1',
+	version='1.0.2',
 	description='Official Python SDK to consume https://iscraper.io LinkedIn data APIs.',
 	author='iScraper',
 	author_email='sales@iscraper.io',

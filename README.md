@@ -24,7 +24,7 @@ client = Client('your-api-key')
 Personal profile details:
 ```python
 url = 'https://linkedin.com/in/williamhgates'
-details = client.profile_details(url, profile_type='personal')
+details = client.profile_details(url, profile_type='personal', recommendations=True, related_profiles=False)
 ```
 Company profile details:
 ```python
