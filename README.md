@@ -4,7 +4,7 @@ This is the official SDK to consume iScraper LinkedIn public data APIs. Don't ha
 ## Installation
 Install from PyPi:
 ```bash
-pip3 install iscraper-python
+pip3 install -U iscraper-python
 ```
 Or install from source:
 ```bash
