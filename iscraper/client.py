@@ -71,7 +71,7 @@ class Client:
         parsed = urlparse(url)
         return str(parsed.path.rstrip('/').split('/')[-1]).strip()
 
-    def profile_details(self, url: str, profile_type: str = 'personal', contact_info: bool = False, recommendations: bool = False, related_profiles: bool = False):
+    def profile_details(self, url: str, profile_type: str = 'personal', contact_info: bool = False, recommendations: bool = False, related_profiles: bool = False, network_info: bool = False):
         """Get details for personal and company LinkedIn profiles.
 
         Args:
@@ -80,6 +80,7 @@ class Client:
             contact_info (bool, optional): Either to fetch the available contact info for a user or not.
             recommendations (bool, optional): Either to fetch the available recommendations or not.
             related_profiles (bool, optional): Either to get the available related profiles or not.
+            network_info (bool, optional): Either to get the number of followers and connections or not.
             
 
         Returns:
@@ -92,7 +93,8 @@ class Client:
             'profile_type': profile_type,
             'contact_info': contact_info,
             'recommendations': recommendations,
-            'related_profiles': related_profiles
+            'related_profiles': related_profiles,
+            'network_info': network_info
         }
         return self._send_request(path=path, data=data)
 
